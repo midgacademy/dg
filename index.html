@@ -355,19 +355,16 @@ footer{border-top:1px solid var(--line);padding-block:34px;background:var(--surf
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .track{width:auto;flex-wrap:wrap}
 } 
-#leadership{position:relative!important;overflow:hidden!important}
-#leadership>*{position:relative;z-index:1}
-#leadership::before,#leadership::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.28);pointer-events:none;animation:pinkbubble 9s ease-in-out infinite}
-#leadership::before{width:240px;height:240px;left:-70px;top:15%}
-#leadership::after{width:170px;height:170px;right:-40px;bottom:8%;animation-delay:2s}
-@keyframes pinkbubble{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(40px,-50px) scale(1.25)}}
-#leadership .card{position:relative!important;overflow:hidden!important;transition:transform .3s,box-shadow .3s!important}
-#leadership .card:hover{transform:translateY(-16px) scale(1.04)!important;box-shadow:0 28px 55px -12px rgba(216,27,122,.85)!important}
-#leadership .card::after{content:"";position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(110deg,transparent,rgba(255,79,163,.28),transparent);animation:pinkshine 3.5s ease-in-out infinite;pointer-events:none}
-@keyframes pinkshine{0%{left:-100%}60%,100%{left:160%}}
-#leadership .card a{animation:pinkglow 2s ease-in-out infinite!important}
-@keyframes pinkglow{0%,100%{box-shadow:0 0 0 0 rgba(255,79,163,.6)}50%{box-shadow:0 0 0 10px rgba(255,79,163,0)}}
-@media (prefers-reduced-motion:reduce){#leadership::before,#leadership::after,#leadership .card::after,#leadership .card a{animation:none!important}}
+#leadership{background-color:#ff4fa3!important;background-image:linear-gradient(120deg,#ffb3d9,#ff4fa3,#d81b7a,#ff8fc7,#ffb3d9)!important;background-size:300% 300%!important;animation:pinkflow 8s ease infinite!important;overflow:hidden!important}
+#leadership h2,#leadership p{color:#fff!important}
+#leadership [class*="card"],#leadership article{background:#fff!important;border:0!important;animation:pinkfloat 4s ease-in-out infinite!important;box-shadow:0 18px 40px -12px rgba(216,27,122,.7)!important}
+#leadership [class*="card"]:nth-child(2),#leadership article:nth-child(2){animation-delay:.6s!important}
+#leadership [class*="card"]:nth-child(3),#leadership article:nth-child(3){animation-delay:1.2s!important}
+#leadership [class*="card"] *,#leadership article *{color:#3a0a28!important}
+#leadership a{background:#ffd1e8!important;color:#d81b7a!important;animation:pinkglow 2s ease-in-out infinite!important}
+@keyframes pinkflow{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes pinkfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes pinkglow{0%,100%{box-shadow:0 0 0 0 rgba(255,79,163,.7)}50%{box-shadow:0 0 0 10px rgba(255,79,163,0)}}
 </style> 
   </head>
   <body>
